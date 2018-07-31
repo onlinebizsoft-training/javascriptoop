@@ -1,33 +1,15 @@
-(function () {
-    var $ = function (params) {
-        return new library(params);
+var $ = function (params) {
+    this.selector = document.getElementById(params);
+    function show() {
+        element = this.selector;
+        return element.style.display = "block";
     };
-    var library = function (params) {
-        var selector = document.querySelectorAll(params),
-            i = 0;
-        this.length = selector.length;
-        for (; i < this.length; i++) {
-            this[i] = selector[i];
-        }
-        return params;
+    function show() {
+        element = this.selector;
+        return element.style.display = "none";
     };
-    if (!window.$) {
-        window.$ = $;
-        $.fn = library.prototype = {
-            hide: function () {
-                var len = this.length;
-                while (len--) {
-                    this[len].style.display = 'none';
-                }
-                return this;
-            },
-            show: function () {
-                var len = this.length;
-                while (len--) {
-                    this[len].style.display = 'block';
-                }
-                return this;
-            },
-        };
-    }
-})();
+    function click(action) {
+        element = this.selector;
+        element.onclick = action;
+    };
+}
