@@ -6,20 +6,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<script src="js/main.js" type="javascript"></script>
+	<script src="js/main.js"></script>
 </head>
-
 <body>
 	<input type="button" value="Hide" id="hidebtn">
 	<input type="button" value="Show" id="showbtn">
 	<p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam aliquid vitae ex. Asperiores, quae doloribus iure hic
 		repellendus necessitatibus saepe. Eaque cum sed quo aliquam ratione. Dolore explicabo quos pariatur!</p>
 	<script>
-		var p = document.getElementById('hidebtn');
-		p.addEventListener("click", function () {
+		var hide = document.getElementById('hidebtn');
+		hide.addEventListener("click", function () {
 			$('#text').hide();
+		});
+		var show = document.getElementById('showbtn');
+		show.addEventListener("click", function () {
+			$('#text').show();
 		});
 	</script>
 </body>
-
 </html>
