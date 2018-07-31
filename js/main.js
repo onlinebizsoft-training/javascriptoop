@@ -4,7 +4,7 @@ var $ = function (params) {
         element = this.selector;
         return element.style.display = "block";
     };
-    function show() {
+    function hide() {
         element = this.selector;
         return element.style.display = "none";
     };
